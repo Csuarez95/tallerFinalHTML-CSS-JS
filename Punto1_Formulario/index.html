@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/JavaScript.js"></script>
+</head>
+<body>
+    <form>
+        <h3>CONTÁCTANOS</h3>
+        <p>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" pattern="[A-Za-z0-9]" required>
+        </p>
+        <p>
+            <input type="email" name="correo" id="correo" placeholder="Correo electrónico" required>
+        </p>
+        <p>
+            <input type="text" name="asunto" id="asunto" placeholder="Asunto del mensaje" required>
+        </p>
+        <p>
+            <textarea name="mensaje" id="mensaje" rows="4" cols="45" placeholder="Mensaje del correo" required></textarea>
+        </p>
+        <p><button type="button" onclick="imprimir()" style="margin-right: 100px">Enviar</button>
+        <button type="reset" value="Borrar">Borrar</button></p>
+    </form>
+</body>
+</html>

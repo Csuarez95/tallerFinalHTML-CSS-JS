@@ -1,0 +1,56 @@
+body{
+    background-image: url(https://static.wixstatic.com/media/bb1bd6_db6f1ff1b2404b9c86f486e34e205353~mv2.png);
+    background-size: 100vw 100vh; /*Ajuste de ancho y alto al tamaño de la ventana*/
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form{
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px black;
+    margin: 10px auto;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+h3{
+    color: snow;
+    text-align: center;
+    font-size: medium;
+}
+
+input{
+    margin: 0;
+    padding: 5px;
+    width: 300px;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+    min-width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: royalblue;
+    border: 1px solid snow;
+    color: snow;
+    padding: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+
+
+
