@@ -23,7 +23,7 @@ function imprimir(){
     } else if (!validarCorreo.test(correo)){
         alert("El correo ingresado no es válido");
     } else {
-        console.log(nombre + "\n" + correo + "\n" + asunto + "\n" + mensaje);
+        console.log("Nombre: " + nombre + "\n" + "Correo: " + correo + "\n" + "Asunto: " + asunto + "\n" + "Mensaje: " + mensaje);
         document.getElementById("nombre").value = "";
         document.getElementById("correo").value = "";
         document.getElementById("asunto").value = "";
