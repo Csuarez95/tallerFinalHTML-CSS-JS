@@ -1,0 +1,33 @@
+body {
+    box-sizing: 10px;
+    background-color: silver;
+    margin-left: 50%;
+}
+
+.element {
+    width: min-content;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    color: black;
+    background-color: silver;
+}
+
+button{
+    padding: 8px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.odd:nth-child(odd){
+    background-color: royalblue;
+    color: snow;
+}
+
+.even:nth-child(even){
+    background-color: coral;
+}
+
+
