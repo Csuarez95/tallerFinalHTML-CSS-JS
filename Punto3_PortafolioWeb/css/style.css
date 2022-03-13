@@ -14,7 +14,8 @@
     border: 1px solid black;
     box-sizing: border-box;
     border-color: snow;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 5px 5px 10px black;
     margin: 10px 30px;
     padding: 50px;
     margin-top: 50px;
@@ -136,5 +137,10 @@ li {
 }
 .aHoja:active{
     background-color: lightskyblue;
+}
+
+#regresarFunciones{
+    background-color: antiquewhite;
+    border: 1px solid black;
 }
 
