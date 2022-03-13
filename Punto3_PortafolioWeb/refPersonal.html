@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/JavaScript.js"></script>
+    <title>Referencias personales</title>
+</head>
+<body id="bodyHoja" onload="eventoMenu()">
+    <header>
+        <h1><i>Referencias personales</i></h1>
+        <select id="slcOpciones" onchange="cambiarFondo(this)">
+            <option value="silver">Tema 1</option>
+            <option value="blueviolet">Tema 2</option>
+            <option value="chartreuse">Tema 3</option>
+        </select>
+    </header>
+    <section>
+        <div class="mainContainer">
+            <div class="list-container">
+                <div class="item">
+                    <p class="btnItem active">
+                        <b>Nombre:</b><i>Daniel Restrepo Castaño</i>
+                    </p>
+                    <div class="itemContent">
+                        <b>Cargo:</b><dd><i>Auxiliar contable</i></dd>
+                        <b>Empresa:</b><dd><i>Invesfruit</i></dd>
+                        <b>Teléfono:</b><dd><i>3053736056</i>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="btnItem active">
+                        <b>Nombre:</b><i>Cristian Suaza Vergara</i>
+                    </p>
+                    <div class="itemContent">
+                        <b>Cargo:</b><dd><i>Analista Front Office</i></dd>
+                        <b>Empresa:</b><dd><i>Adecco</i></dd>
+                        <b>Teléfono:</b><dd><i>3167631628</i>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="btnItem active">
+                        <b>Nombre:</b><i>William Bautista Alvarado</i>
+                    </p>
+                    <div class="itemContent">
+                        <b>Cargo:</b><dd><i>Senior Bussines Analyst</i></dd>
+                        <b>Empresa:</b><dd><i>BPT</i></dd>
+                        <b>Teléfono:</b><dd><i>3154516973</i></dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <nav> <a href="expLaboral.html"> Regresar página anterior</a></nav><br>
+    <nav> <a href="refFamiliares.html"> Ir a las referencias personales </a></nav><br>
+    <button id="btnRegresarJava" type="button"><img src="download/BotonRegresar.PNG" height="50" width="50" onclick="paraPrincipal()"></button>
+    <footer style="text-align: right;">Elaborado por: Cristian Suárez Acosta</footer>
+</body>
+</html>

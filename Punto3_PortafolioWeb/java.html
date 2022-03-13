@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/JavaScript.js"></script>
+    <link href="css/prism.css" rel="stylesheet" />
+</head>
+<body class="bodyTalleres" onload="eventoMenu()">
+    <header>
+        <h1 class="titulo">Talleres Java</h1>
+    </header>
+    <article>
+        <section>
+            <div class="mainContainer">
+                <div class="list-container">
+                    <div class="item">
+                        <p class="btnItem">
+                            Main Taller 1 - Variables e impresión
+                        </p>
+                        <div class="itemContent">
+                            <pre>
+                                package com.company;
+
+                                import java.util.Scanner;
+
+                                public class Main {
+
+                                    public static String nombre, apellido, edad, altura, nombrePadre, nombreMadre, ciudad, pais, nombreMascota, edadMascota, tipoMascota;
+                                    public static int opcion;
+                                    public static boolean control=true;
+
+                                    public static void main(String[] args) {
+
+                                        while (control) {
+                                            Persona dato = new Persona();
+                                            Mascota dato1 = new Mascota();
+                                            System.out.println("Bienvenido, por favor seleccione una de las siguientes opciones");
+                                            System.out.println("1. Registrar nombre y apellido");
+                                            System.out.println("2. Registrar nombre, apellido, edad y estatura");
+                                            System.out.println("3. Registrar su nombre y nombre de los padres");
+                                            System.out.println("4. Registrar ciudad capital y país");
+                                            System.out.println("5. Registrar información mascota");
+                                            System.out.println("6. Salir");
+                                            System.out.println("Presione 0 para salir");
+                                            Scanner opcionMenu = new Scanner(System.in);
+                                            opcion = opcionMenu.nextInt();
+
+                                            switch (opcion) {
+                                                case 1 -> {
+                                                    System.out.println("Ha seleccionado el registro de nombre y apellido");
+                                                    dato.solicitarNombre();
+                                                    nombre = dato.capturarDato();
+                                                    dato.solicitarApellido();
+                                                    apellido = dato.capturarDato();
+                                                    System.out.println("Muchas gracias señor(a) " + nombre + " " + apellido);
+                                                    break;
+                                                }
+                                                case 2 -> {
+                                                    System.out.println("Ha seleccionado el registro de nombre, apellido, edad y estatura");
+                                                    dato.solicitarNombre();
+                                                    nombre = dato.capturarDato();
+                                                    dato.solicitarApellido();
+                                                    apellido = dato.capturarDato();
+                                                    dato.solicitarEdad();
+                                                    edad = dato.capturarDato();
+                                                    dato.solicitarAltura();
+                                                    altura = dato.capturarDato();
+                                                    System.out.println("Muchas gracias señor(a) " + nombre + " " + apellido);
+                                                    System.out.println("Usted ha registrado una edad de " + edad + " años y una estatura de " + altura + " metros");
+                                                    break;
+                                                }
+                                                case 3 -> {
+                                                    System.out.println("Ha seleccionado el registro la familia");
+                                                    dato.solicitarNombre();
+                                                    nombre = dato.capturarDato();
+                                                    dato.solicitarApellido();
+                                                    apellido = dato.capturarDato();
+                                                    System.out.println("Por favor, ingrese el nombre de su padre");
+                                                    nombrePadre = dato.capturarDato();
+                                                    System.out.println("Por favor, ingrese el nombre de su madre");
+                                                    nombreMadre = dato.capturarDato();
+                                                    System.out.println("Yo " + nombre + " " + apellido + ", soy hijo de " + nombreMadre + " y " + nombrePadre);
+                                                    break;
+                                                }
+                                                case 4 -> {
+                                                    System.out.println("Ha seleccionado el registro de la ciudad y el país");
+                                                    System.out.println("Por favor, ingrese la ciudad capital");
+                                                    ciudad = dato.capturarDato();
+                                                    System.out.println("Por favor, ingrese el país");
+                                                    pais = dato.capturarDato();
+                                                    System.out.println("La ciudad " + ciudad + ", es la capital del país " + pais);
+                                                    break;
+                                                }
+                                                case 5 -> {
+                                                    System.out.println("Ha seleccionado el registro de su mascota");
+                                                    dato1.solicitarNombreMascota();
+                                                    nombreMascota = dato1.capturarDato();
+                                                    dato1.solicitarEdad();
+                                                    edadMascota = dato1.capturarDato();
+                                                    dato1.solicitarTipo();
+                                                    tipoMascota = dato1.capturarDato();
+                                                    dato.solicitarNombre();
+                                                    nombre = dato.capturarDato();
+                                                    System.out.println(nombreMascota + " es un(a) " + tipoMascota + ", el cual, tiene " + edadMascota + " años de edad y " + nombre + " es actualmente su dueño(a) ");
+                                                    break;
+                                                }
+                                                case 6 -> {
+                                                    System.out.println("Saliendo del programa");
+                                                    control = false;
+                                                }
+                                                default -> {
+                                                    System.out.println("Opción inválida");
+                                                }
+                                            }
+                                        }
+                                        System.exit(0);
+                                    }
+                                }
+                            </pre>
+                        </div>
+                        <ul>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller1/Taller1_Variables_Impresion/src/com/company/Mascota.java" target="_blank">Clase Mascota</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller1/Taller1_Variables_Impresion/src/com/company/Persona.java" target="_blank">Clase Persona</a></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <p class="btnItem">
+                            Main Taller 2 - Condicionales
+                        </p>
+                        <div class="itemContent">
+                            <pre>
+                                package com.mycompany.taller2_condicionales;
+
+                                import java.util.Scanner;
+
+                                public class Main {
+
+                                    public static void main(String[] args) {
+                                        
+                                        boolean banderaPrincipal = true;
+                                        
+                                        while(banderaPrincipal){
+                                        Menu seleccion = new Menu();
+                                        int opcion = seleccion.menuInicial();
+                                        boolean bandera = true;
+                                        
+                                        switch (opcion){
+                                            case 1 -> {
+                                                System.out.println("Por favor, ingrese su edad");
+                                                Scanner edadTeclado = new Scanner(System.in);
+                                                int edad = edadTeclado.nextInt();
+                                                Persona edadIngresada = new Persona(); //Instanciar la clase.
+                                                edadIngresada.mayorEdad(edad);
+                                                break;
+                                            }
+                                            case 2 -> {
+                                                System.out.println("Por favor, ingrese su edad");
+                                                Scanner edadTeclado = new Scanner(System.in);
+                                                int edad = edadTeclado.nextInt();
+                                                Persona edadIngresada = new Persona(); //Instanciar la clase.
+                                                edadIngresada.mayorEdad(edad);
+                                                break;
+                                            }
+                                            case 3 -> {
+                                                System.out.println("Por favor, ingrese su Nombre");
+                                                Scanner ingreso = new Scanner(System.in);
+                                                String nombre = ingreso.nextLine();
+                                                System.out.println("Por favor, ingrese su Apellido");
+                                                String apellido = ingreso.nextLine();
+                                                System.out.println("Por favor, ingrese su edad");
+                                                int edad = ingreso.nextInt();
+                                                if (edad >= 18) {
+                                                    System.out.println(nombre + " " + apellido + " Usted es mayor de edad, por lo tanto puede entrar a la fiesta");
+                                                } else {
+                                                    System.out.println(nombre + apellido + " Usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa");
+                                                }
+                                                break;
+                                            }
+                                            case 4 ->{
+                                                while (bandera){
+                                                Pelicula opcionPelicula = new Pelicula();
+                                                int opcionP = opcionPelicula.menuPeliculas();
+                                                if (opcionP == 1){
+                                                    opcionPelicula.mostrarPeliculas();
+                                                    System.out.println("Seleccione la pelicula que desea alquilar");
+                                                    Scanner alquiler = new Scanner(System.in);
+                                                    int alquilerP = alquiler.nextInt();
+                                                    opcionPelicula.peliculasDisponibles(alquilerP);
+                                                } else if (opcionP == 2){
+                                                    opcionPelicula.mostrarPeliculas();
+                                                    System.out.println("Seleccione la pelicula que desea devolver");
+                                                    Scanner devolver = new Scanner(System.in);
+                                                    int devolverP = devolver.nextInt();
+                                                    opcionPelicula.devolverPeliculas(devolverP);
+                                                } else if (opcionP == 3){
+                                                    System.out.println("Saliendo del menú de la video tienda");
+                                                    bandera = false;
+                                                } else{
+                                                    System.out.println("Opción inválida");
+                                                }
+                                                }
+                                                break;
+                                            }
+                                            case 5 ->{
+                                                while (bandera){
+                                                Farmacia opcionProducto = new Farmacia();
+                                                int opcionP = opcionProducto.menuProductos();
+                                                if (opcionP == 1){
+                                                    opcionProducto.mostrarProductos();
+                                                    System.out.println("Seleccione el producto que desea adquirir");
+                                                    Scanner alquiler = new Scanner(System.in);
+                                                    int alquilerP = alquiler.nextInt();
+                                                    opcionProducto.productosDisponibles(alquilerP);
+                                                } else if (opcionP == 2){
+                                                    opcionProducto.mostrarProductos();
+                                                    System.out.println("Seleccione el producto que desea devolver");
+                                                    Scanner devolver = new Scanner(System.in);
+                                                    int devolverP = devolver.nextInt();
+                                                    opcionProducto.devolverProducto(devolverP);
+                                                } else if (opcionP == 3){
+                                                    System.out.println("Saliendo del menú de la Droguería Mi Salud");
+                                                    bandera = false;
+                                                } else {
+                                                    System.out.println("Opcion inválida");
+                                                }
+                                                }
+                                                break;
+                                            }
+                                            case 6 ->{
+                                                while(bandera){
+                                                    Motos opcionMoto = new Motos();
+                                                    int opcionM = opcionMoto.menuMotos();
+                                                    if (opcionM == 1){
+                                                        System.out.println("Realice el ingreso de la moto");
+                                                        Scanner moto = new Scanner(System.in);
+                                                        System.out.println("Ingrese el nombre del dueño");
+                                                        String nombre = moto.nextLine();
+                                                        System.out.println("Ingrese la placa de la moto");
+                                                        String placa = moto.nextLine();
+                                                        System.out.println("Ingrese las observaciones del cliente");
+                                                        String observaciones = moto.nextLine();
+                                                        opcionMoto.registroMotos(nombre, placa, observaciones);
+                                                    } else if (opcionM == 2){
+                                                        System.out.println("Registre la salida de la moto moto");
+                                                        Scanner moto = new Scanner(System.in);
+                                                        System.out.println("Ingrese la placa de la moto");
+                                                        String nombre = moto.nextLine();
+                                                        System.out.println("Ingrese las reparaciones realizadas");
+                                                        String placa = moto.nextLine();
+                                                        System.out.println("Ingrese el inventario de repuestos");
+                                                        String observaciones = moto.nextLine();
+                                                        opcionMoto.salidaMotos(nombre, placa, observaciones);
+                                                    }else if (opcionM == 3){
+                                                        System.out.println("Saliendo del menú del taller de Motos");
+                                                        bandera = false;
+                                                    } else {
+                                                        System.out.println("Opcion inválida");
+                                                    }
+                                                }
+                                                break;
+                                            }
+                                            case 7 ->{
+                                                
+                                                    IMC calculoIMC = new IMC();
+                                                    System.out.println("Bienvenido al programa para el cálculo del IMC");
+                                                    Scanner imc = new Scanner(System.in);
+                                                    System.out.println("Ingrese su peso en kilogramos");
+                                                    float peso = imc.nextFloat();
+                                                    System.out.println("Ingrese su altura en metros y usando coma (,)");
+                                                    float altura = imc.nextFloat();
+                                                    calculoIMC.calculoIMC(peso, altura);
+                                                    break;
+                                            }
+                                            
+                                            case 8 ->{
+                                                while(bandera){
+                                                    Pasteleria opcionPastel = new Pasteleria();
+                                                    int opcionM = opcionPastel.menuPastel();
+                                                    if (opcionM == 1){
+                                                        opcionPastel.mostrarPasteles();
+                                                        System.out.println("Seleccione el sabor de pastel que desea");
+                                                        Scanner opcionP = new Scanner(System.in);
+                                                        int seleccionP = opcionP.nextInt();
+                                                        opcionPastel.pastelesDisponibles(seleccionP);
+                                                    } else if (opcionM == 2) {
+                                                        System.out.println("Saliendo del menú de la pasteleria");
+                                                        bandera = false;
+                                                    } else {
+                                                        System.out.println("Opcion inválida");
+                                                    }
+                                                }
+                                                
+                                                break;
+                                            }
+                                            case 9 ->{
+                                                while (bandera){    
+                                                Areas opcionAreas = new Areas();
+                                                    int opcionA = opcionAreas.menuAreas();
+                                                    Scanner datos = new Scanner(System.in);
+                                                    if (opcionA == 1){
+                                                        System.out.println("Ingrese la base del rectángulo");
+                                                        float base = datos.nextFloat();
+                                                        System.out.println("Ingrese la altura del rectángulo");
+                                                        float altura = datos.nextFloat();
+                                                        opcionAreas.areaRectangulo(base, altura);
+                                                    } else if (opcionA == 2){
+                                                        System.out.println("Ingrese la base del triángulo");
+                                                        float base = datos.nextFloat();
+                                                        System.out.println("Ingrese la altura del triángulo");
+                                                        float altura = datos.nextFloat();
+                                                        opcionAreas.areaTriangulo(base, altura);
+                                                    } else if (opcionA == 3){
+                                                        System.out.println("Ingrese la base superior del trapecio");
+                                                        float base = datos.nextFloat();
+                                                        System.out.println("Ingrese la base inferior del trapecio");
+                                                        float base1 = datos.nextFloat();
+                                                        System.out.println("Ingrese la base altura del trapecio");
+                                                        float altura = datos.nextFloat();
+                                                        opcionAreas.areaTrapecio(base, base1, altura);
+                                                    } else if (opcionA == 4) {
+                                                        System.out.println("Saliendo del cálculo de áreas");
+                                                        bandera = false;
+                                                    } else {
+                                                        System.out.println("Opción inválida");
+                                                    }
+                                                }
+                                                break;
+                                            }
+                                            case 10 ->{
+                                                while(bandera){
+                                                int nuevoMonto = 0;
+                                                Banco opcionBanco = new Banco();
+                                                opcionBanco.mostrarUsuarios();
+                                                Scanner datos = new Scanner(System.in);
+                                                System.out.println("Seleccione su usuario: ");
+                                                int nombre = datos.nextInt();
+                                                if (nombre == 4){
+                                                    System.out.println("Usuario no existe");
+                                                    bandera = false;
+                                                } else {
+                                                opcionBanco.imprimirUsuario(nombre);
+                                                int opcionB = opcionBanco.menuBancos();
+                                                if (opcionB == 1){
+                                                    System.out.println("Seleccione el monto que desea agregar");
+                                                    int monto = datos.nextInt();
+                                                    if (monto < 0){
+                                                        System.out.println("No se permite montos negativos");
+                                                    } else if (monto >= 0){
+                                                        //System.out.println("Se ha realizado el ingreso de:" + monto);
+                                                        nuevoMonto = opcionBanco.registroMonto(monto, nombre);
+                                                        System.out.println("Su nuevo monto es: " + nuevoMonto);
+                                                        System.out.println("Gracias por utilizar el servicio");
+                                                    }
+                                                } else if (opcionB == 2){
+                                                    int montoBanco;
+                                                    int saldoNuevo = 0;
+                                                    nuevoMonto = opcionBanco.traerMonto(nombre);
+                                                    System.out.println("El saldo actual de su cuenta es: " + nuevoMonto);
+                                                    System.out.println("Ingrese el monto que desee retirar");
+                                                    montoBanco = opcionBanco.traerMonto(nombre);
+                                                    int montoRetiro = datos.nextInt();
+                                                    if (montoRetiro > montoBanco){
+                                                        System.out.println("Está solicitando un monto mayor al saldo");
+                                                        System.out.println("Saliendo del programa");
+                                                    } else {
+                                                        saldoNuevo = montoBanco - montoRetiro;
+                                                        System.out.println("Su nuevo saldo es: " + saldoNuevo);
+                                                    }
+                                                } else if (opcionB == 3){
+                                                    int montoCuenta;
+                                                    montoCuenta = opcionBanco.traerMonto(nombre);
+                                                    System.out.println("Su saldo actual es: " + montoCuenta);
+                                                } else if (opcionB == 4){
+                                                    System.out.println("Saliendo de la aplicacion");
+                                                    bandera = false;
+                                                } else {
+                                                    System.out.println("Opcion inválida");
+                                                }
+                                                }
+                                            }
+                                                break;
+                                            }
+                                            case 11 -> {
+                                                System.out.println("Saliendo.... Gracias");
+                                                banderaPrincipal = false;
+                                            }
+                                            default -> {
+                                                System.out.println("Opción inválida");
+                                            }
+                                        }
+                                    }
+                                    System.exit(0);  
+                                    }
+                                }
+                            </pre>
+                        </div>
+                        <ul>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Areas.java" target="_blank">Clase Areas</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Banco.java" target="_blank">Clase Banco</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Farmacia.java" target="_blank">Clase Farmacia</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/IMC.java" target="_blank">Clase IMC</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Menu.java" target="_blank">Clase Menu</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Motos.java" target="_blank">Clase Motos</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Pasteleria.java" target="_blank">Clase Pasteleria</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Pelicula.java" target="_blank">Clase Pelicula</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller2/Taller2_Condicionales/src/main/java/com/mycompany/taller2_condicionales/Persona.java" target="_blank">Clase Persona</a></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <p class="btnItem">
+                            Taller 3 - Ciclos
+                        </p>
+                        <div class="itemContent">
+                            <pre>
+                                package taller3_Ciclos;
+
+                                import java.util.ArrayList;
+                                import java.util.Scanner;
+                                
+                                public class Main {
+                                
+                                    public static void main(String[] args) {
+                                        
+                                        boolean banderaPrincipal = true;
+                                        boolean bandera = true;
+                                        int opcion;
+                                        
+                                        while(banderaPrincipal) {
+                                            Menu seleccion = new Menu();
+                                            opcion = seleccion.menuInicial();
+                                            Ciclos dato = new Ciclos();
+                                            Tabla valor = new Tabla();
+                                            
+                                            switch(opcion) {
+                                            case 1:
+                                                dato.solicitarDato();
+                                                int dat = dato.capturarDato();
+                                                dato.cicloPara(dat);
+                                                break;
+                                                
+                                            case 2:
+                                                dato.solicitarDato();
+                                                int dat1 = dato.capturarDato();
+                                                dato.cicloMientras(dat1);
+                                                break;
+                                                
+                                            case 3:
+                                                dato.solicitarDato();
+                                                int dat2 = dato.capturarDato();
+                                                dato.cicloHastaQue(dat2);
+                                                break;
+                                            
+                                            case 4:
+                                                valor.solicitarTabla();
+                                                int tabla = valor.capturarDato();
+                                                valor.solicitarLimite();
+                                                int limite = valor.capturarDato();
+                                                valor.tablaMultiplicar(limite, tabla);
+                                                break;
+                                            
+                                            case 5:
+                                                bandera = true;
+                                                String nombre = "";
+                                                while(bandera) {
+                                                    Infinito opcionMenu = new Infinito();
+                                                    int seleccionPersona = opcionMenu.menuSeleccion();
+                                                    switch(seleccionPersona) {
+                                                    case 1:
+                                                        System.out.println("Ingrese su nombre");
+                                                        nombre = opcionMenu.capturarDato();
+                                                        System.out.println("Bienvenido señor(a)" + nombre);
+                                                        break;
+                                                    case 2:
+                                                        if (nombre == "") {
+                                                            System.out.println("No ha registrado su nombre, por favor registrarlo en la opcion 1");
+                                                        } else {
+                                                            System.out.println("Hola " + nombre + ", espero se encuentre bien en este día");
+                                                        }
+                                                        break;
+                                                    case 3:
+                                                        if (nombre == "") {
+                                                            System.out.println("Muchas gracias por su tiempo, vuelva pronto");
+                                                        } else {
+                                                            System.out.println("Muchas gracias por su tiempo señor(a) " + nombre);
+                                                        }
+                                                        bandera = false;
+                                                        break;
+                                                    default:
+                                                        System.out.print("Ingresó opcion inválida");
+                                                    }
+                                                }
+                                                break;
+                                            
+                                            case 6:
+                                                bandera = true;
+                                                ArrayList<Contacto> lista = new ArrayList<Contacto>();
+                                                while (bandera) {
+                                                    System.out.println("Bienvenido a la agenda telefónica, seleccione la opción ");
+                                                    System.out.println("1. Agregar contactos\n2. Consultar contacto\n3. Eliminar contacto\n4. Salir");
+                                                    Scanner input = new Scanner(System.in);
+                                                    int opcion6 = input.nextInt();
+                                                    switch(opcion6) {
+                                                    case 1:
+                                                        if (lista.size() == 3) {
+                                                            System.out.println("No hay espacio para agregar contactos");
+                                                        } else {
+                                                             Contacto contacto = Contacto.capturarDato(lista);
+                                                             contacto.agregarContacto(contacto, lista);
+                                                             
+                                                        }
+                                                        break;
+                                                    case 2:
+                                                        if (lista.isEmpty()) {
+                                                            System.out.println("No hay contactos agregados");
+                                                        } else {
+                                                            int i = 1;
+                                                            for (Contacto a: lista) {
+                                                                System.out.println("Contacto: " + i);
+                                                                System.out.println(a.toString());
+                                                                i++;
+                                                            }
+                                                        }
+                                                        break;
+                                                    case 3:
+                                                        if (lista.isEmpty()) {
+                                                            System.out.println("No hay contactos para eliminar");
+                                                        } else {
+                                                            int i = 1;
+                                                            System.out.println("Seleccione el contacto que desea eliminar");
+                                                            for (Contacto a: lista) {
+                                                                System.out.println("Contacto: " + i);
+                                                                System.out.println(a.toString());
+                                                                i++;
+                                                            }
+                                                            int borrar = input.nextInt();
+                                                            Contacto.eliminarDato(borrar, lista);
+                                                        }
+                                                        break;
+                                                    case 4:
+                                                        System.out.print("Saliendo del programa\n");
+                                                        bandera = false;
+                                                        break;
+                                                    default:
+                                                        System.out.println("Ingresó opción inválida");
+                                                    
+                                                    }
+                                                }
+                                                break;
+                                            
+                                            case 7:
+                                                bandera = true;
+                                                ArrayList<Parqueadero> lista1 = new ArrayList<Parqueadero>();
+                                                while (bandera) {
+                                                    System.out.println("Bienvenido al parqueadero El Guardián, seleccione la opción ");
+                                                    System.out.println("1. Ingresar vehículo\n2. Consultar vehículos en parqueadero\n3. Retirar vehículo\n4. Salir");
+                                                    Scanner input = new Scanner(System.in);
+                                                    int opcion7 = input.nextInt();
+                                                    switch(opcion7) {
+                                                    case 1:
+                                                        if (lista1.size() == 5) {
+                                                            System.out.println("No hay espacio para ingresar más vehículos");
+                                                        } else {
+                                                             Parqueadero parqueadero = Parqueadero.capturarDato(lista1);
+                                                             parqueadero.agregarVehiculo(parqueadero, lista1);
+                                                             
+                                                        }
+                                                        break;
+                                                    case 2:
+                                                        if (lista1.isEmpty()) {
+                                                            System.out.println("No hay vehículos en el parqueadero");
+                                                        } else {
+                                                            int i = 1;
+                                                            for (Parqueadero a: lista1) {
+                                                                System.out.println("Registro: " + i);
+                                                                System.out.println(a.toString());
+                                                                i++;
+                                                            }
+                                                        }
+                                                        break;
+                                                    case 3:
+                                                        if (lista1.isEmpty()) {
+                                                            System.out.println("No hay vehículos para retirar");
+                                                        } else {
+                                                            int i = 1;
+                                                            System.out.println("Seleccione el vehículo que desea retirar");
+                                                            for (Parqueadero a: lista1) {
+                                                                System.out.println("Registro: " + i);
+                                                                System.out.println(a.toString());
+                                                                i++;
+                                                            }
+                                                            int borrar = input.nextInt();
+                                                            Parqueadero.eliminarDato(borrar, lista1);
+                                                        }
+                                                        break;
+                                                    case 4:
+                                                        System.out.print("Saliendo del programa\n");
+                                                        bandera = false;
+                                                        break;
+                                                    default:
+                                                        System.out.println("Ingresó opción inválida");
+                                                    
+                                                    }
+                                                }
+                                                break;
+                                            
+                                            case 8:
+                                                bandera = true;
+                                                ArrayList<Escuela> lista2 = new ArrayList<Escuela>();
+                                                while (bandera) {
+                                                    System.out.println("Bienvenido a la Escuela Automovilística, seleccione la opción ");
+                                                    System.out.println("1. Registrar Usuario\n2. Consultar usuarios\n3. Borrar usuario\n4. Salir");
+                                                    Scanner input = new Scanner(System.in);
+                                                    int opcion8 = input.nextInt();
+                                                    switch(opcion8) {
+                                                    case 1:
+                                                        if (lista2.size() == 8) {
+                                                            System.out.println("No hay espacio para registrar más usuarios");
+                                                        } else {
+                                                            Escuela escuela = Escuela.capturarDato(lista2);
+                                                            escuela.agregarPersona(escuela, lista2);
+                                                        }
+                                                        break;
+                                                    case 2:
+                                                        if (lista2.isEmpty()) {
+                                                            System.out.println("No hay usuarios registrados");
+                                                        } else {
+                                                            int i = 1;
+                                                            for (Escuela a: lista2) {
+                                                                System.out.println("Usuario: " + i);
+                                                                System.out.println(a.toString());
+                                                                i++;
+                                                            }
+                                                        }
+                                                        break;
+                                                    case 3:
+                                                        if (lista2.isEmpty()) {
+                                                            System.out.println("No hay usuarios para borrar");
+                                                        } else {
+                                                            int i = 1;
+                                                            System.out.println("Seleccione el usuario que desea borrar");
+                                                            for (Escuela a: lista2) {
+                                                                System.out.println("Usuario: " + i);
+                                                                System.out.println(a.toString());
+                                                                i++;
+                                                            }
+                                                            int borrar = input.nextInt();
+                                                            Escuela.eliminarDato(borrar, lista2);
+                                                        }
+                                                        break;
+                                                    case 4:
+                                                        System.out.print("Saliendo del programa\n");
+                                                        bandera = false;
+                                                        break;
+                                                    default:
+                                                        System.out.println("Ingresó opción inválida");
+                                                    
+                                                    }
+                                                }
+                                                break;
+                                            case 9:
+                                                System.out.println("Saliendo del programa");
+                                                banderaPrincipal = false;
+                                                break;
+                                            default:
+                                                System.out.println("Opcion inválida, ingrese nuevamente");
+                                            }
+                                            
+                                        }
+                                        System.exit(0);
+                                    }
+                                
+                                }
+                            </pre>
+                        </div>
+                        <ul>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller3/taller3_Ciclos/src/taller3_Ciclos/Ciclos.java" target="_blank">Clase Ciclos</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller3/taller3_Ciclos/src/taller3_Ciclos/Contacto.java" target="_blank">Clase Contacto</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller3/taller3_Ciclos/src/taller3_Ciclos/Escuela.java" target="_blank">Clase Escuela</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller3/taller3_Ciclos/src/taller3_Ciclos/Infinito.java" target="_blank">Clase Infinito</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller3/taller3_Ciclos/src/taller3_Ciclos/Menu.java" target="_blank">Clase Menu</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller3/taller3_Ciclos/src/taller3_Ciclos/Parqueadero.java" target="_blank">Clase Parqueadero</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller3/taller3_Ciclos/src/taller3_Ciclos/Tabla.java" target="_blank">Clase Tabla</a></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <p class="btnItem">
+                            Taller 4 - Arreglos
+                        </p>
+                        <div class="itemContent">
+                            <pre>
+                                package com.company;
+
+                                import java.util.Scanner;
+
+                                public class Main {
+
+                                    public static void main(String[] args) {
+
+                                        boolean banderaPrincipal = true;
+
+                                        while (banderaPrincipal){
+                                            Menu seleccion = new Menu();
+                                            int opc = seleccion.menuInicial();
+                                            boolean bandera = true;
+                                            Scanner lecturaTeclado = new Scanner(System.in);
+
+                                            switch (opc){
+                                                case 1 -> {
+                                                    while(bandera) {
+                                                        System.out.println("Ingrese el tamaño del arreglo entre 1 y 20");
+                                                        int tamano = lecturaTeclado.nextByte();
+                                                        if ((tamano > 0) && (tamano <= 20)) {
+                                                            Arreglo vector = new Arreglo();
+                                                            vector.llenadoVector(tamano);
+                                                            bandera = false;
+                                                        } else {
+                                                            System.out.println("Ingresó un tamaño fuera del rango");
+                                                        }
+                                                    }
+                                                }
+                                                case 2 -> {
+                                                    Arreglo vector = new Arreglo();
+                                                    vector.llenadoAleatorio();
+                                                }
+                                                case 3 -> {
+                                                    int i, contador;
+                                                    for (int num = 1; num < 1000; num++) {
+                                                        i = 1;
+                                                        contador = 0;
+                                                        while (i <= num){
+                                                            if ((num % i) == 0){
+                                                                contador++;
+                                                            }
+                                                        i++;
+                                                        }
+                                                        if(contador == 2){
+                                                            System.out.print(num + ", ");
+                                                        }
+                                                    }
+                                                }
+                                                case 4 -> {
+                                                    while(bandera) {
+                                                        System.out.println("Ingrese el número de filas mayores a 0 y menores o iguales a 10");
+                                                        int fila = lecturaTeclado.nextInt();
+                                                        System.out.println("Ingrese el número de columnas mayores a 0 y menores o iguales a 10");
+                                                        int columna = lecturaTeclado.nextInt();
+                                                        Matriz mat = new Matriz();
+                                                        if ((fila <= 0) || (fila > 10) || (columna <= 0) || (columna > 10)) {
+                                                            System.out.println("Ingresó parámetro inválido, inicie nuevamente");
+                                                        } else {
+                                                            mat.llenadoMatriz(fila, columna);
+                                                            bandera = false;
+                                                        }
+                                                    }
+                                                }
+                                                case 5 -> {
+                                                    while (bandera) {
+                                                        System.out.println("        |                           COLUMNAS                                   |");
+                                                        System.out.println("        |  0   |  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8   |  9    |");
+                                                        System.out.println("    | 0 | 1x1  | 2x1  | 3x1  | 4x1  | 5x1  | 6x1  | 7x1  | 8x1  | 9x1  | 10x1  |");
+                                                        System.out.println("    | 1 | 1x2  | 2x2  | 3x2  | 4x2  | 5x2  | 6x2  | 7x2  | 8x2  | 9x2  | 10x2  |");
+                                                        System.out.println("  F | 2 | 1x3  | 2x3  | 3x3  | 4x3  | 5x3  | 6x3  | 7x3  | 8x3  | 9x3  | 10x3  |");
+                                                        System.out.println("  I | 3 | 1x4  | 2x4  | 3x4  | 4x4  | 5x4  | 6x4  | 7x4  | 8x4  | 9x4  | 10x4  |");
+                                                        System.out.println("  L | 4 | 1x5  | 2x5  | 3x5  | 4x5  | 5x5  | 6x5  | 7x5  | 8x5  | 9x5  | 10x5  |");
+                                                        System.out.println("  A | 5 | 1x6  | 2x6  | 3x6  | 4x6  | 5x6  | 6x6  | 7x6  | 8x6  | 9x6  | 10x6  |");
+                                                        System.out.println("  S | 6 | 1x7  | 2x7  | 3x7  | 4x7  | 5x7  | 6x7  | 7x7  | 8x7  | 9x7  | 10x7  |");
+                                                        System.out.println("    | 7 | 1x8  | 2x8  | 3x8  | 4x8  | 5x8  | 6x8  | 7x8  | 8x8  | 9x8  | 10x8  |");
+                                                        System.out.println("    | 8 | 1x9  | 2x9  | 3x9  | 4x9  | 5x9  | 6x9  | 7x9  | 8x9  | 9x9  | 10x9  |");
+                                                        System.out.println("    | 9 | 1x10 | 2x10 | 3x10 | 4x10 | 5x10 | 6x10 | 7x10 | 8x10 | 9x10 | 10x10 |");
+                                                        System.out.println("\n Ingrese la operación que desee consultar");
+                                                        System.out.println("Ingrese la fila");
+                                                        Matriz mat = new Matriz();
+                                                        int fila = lecturaTeclado.nextInt();
+                                                        System.out.println("Ingrese la columna");
+                                                        int columna = lecturaTeclado.nextInt();
+                                                        if ((fila < 0) || (fila > 9) || (columna < 0) || (columna > 9)){
+                                                            System.out.println("Ingresó valores erróneos de fila o columna");
+                                                        } else {
+                                                            mat.calculoTabla(fila, columna);
+                                                            bandera = false;
+                                                        }
+
+                                                    }
+                                                }
+                                                case 6 -> {
+                                                    System.out.println("Saliendo del programa");;
+                                                    banderaPrincipal = false;
+                                                }
+                                                default ->{
+                                                    System.out.println("Opcion inválida");
+                                                }
+
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                            </pre>
+                        </div>
+                        <ul>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller4/Taller4_Arreglos/src/com/company/Arreglo.java" target="_blank">Clase Arreglo</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller4/Taller4_Arreglos/src/com/company/Matriz.java" target="_blank">Clase Matriz</a></li>
+                            <li><a href="https://github.com/Csuarez95/talleresJava/blob/taller4/Taller4_Arreglos/src/com/company/Menu.java" target="_blank">Clase Menu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <button id="btnRegresarJava" type="button"><img src="download/BotonRegresar.PNG" height="50" width="50" onclick="paraPrincipal()"></button>
+        </section>
+    </article>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/JavaScript.js"></script>
+    <title>Referencias familiares</title>
+</head>
+<body id="bodyHoja" onload="eventoMenu()">
+    <header>
+        <h1><i>Referencias familiares</i></h1>
+        <select id="slcOpciones" onchange="cambiarFondo(this)">
+            <option value="silver">Tema 1</option>
+            <option value="blueviolet">Tema 2</option>
+            <option value="chartreuse">Tema 3</option>
+        </select>
+    </header>
+    <section>
+        <div class="mainContainer">
+            <div class="list-container">
+                <div class="item">
+                    <p class="btnItem active">
+                        <b>Nombre:</b><i>Olga Rocío Acosta</i>
+                    </p>
+                    <div class="itemContent">
+                        <b>Cargo:</b><dd><i>Pensionada</i></dd>
+                        <b>Empresa:</b><dd><i>Comiel LTD</i></dd>
+                        <b>Teléfono:</b><dd><i>3226832071</i>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="btnItem active">
+                        <b>Nombre:</b><i>Francely Acosta Puerta</i>
+                    </p>
+                    <div class="itemContent">
+                        <b>Cargo:</b><dd><i>Mercaderista</i></dd>
+                        <b>Empresa:</b><dd><i>FritoLay</i></dd>
+                        <b>Teléfono:</b><dd><i>3127042565</i>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="btnItem active">
+                        <b>Nombre:</b><i>Juan Carlos Suárez Correcha</i>
+                    </p>
+                    <div class="itemContent">
+                        <b>Cargo:</b><dd><i>Mensajero</i></dd>
+                        <b>Empresa:</b><dd><i>Tecnifluidos</i></dd>
+                        <b>Teléfono:</b><dd><i>3154005344</i></dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <nav> <a href="refPersonal.html"> Regresar página anterior</a></nav><br>
+    <nav> <a href="estudios.html"> Ir a estudios realizados </a></nav><br>
+    <button id="btnRegresarJava" type="button"><img src="download/BotonRegresar.PNG" height="50" width="50" onclick="paraPrincipal()"></button>
+    <footer style="text-align: right;">Elaborado por: Cristian Suárez Acosta</footer>
+</body>
+</html>

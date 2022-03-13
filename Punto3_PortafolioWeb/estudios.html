@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/JavaScript.js"></script>
+    <title>Estudios Realizados</title>
+</head>
+<body id="bodyHoja" onload="eventoMenu()">
+    <header>
+        <h1><i>Estudios Universitarios</i></h1>
+        <select id="slcOpciones" onchange="cambiarFondo(this)">
+            <option value="silver">Tema 1</option>
+            <option value="blueviolet">Tema 2</option>
+            <option value="chartreuse">Tema 3</option>
+        </select>
+    </header>
+    <section>
+        <section>
+            <div class="mainContainer">
+                <div class="list-container">
+                    <div class="item">
+                        <p class="btnItem active">
+                            <b>Institución:</b><i>Servicio Nacional de Aprendizaje SENA</i>
+                        </p>
+                        <div class="itemContent">
+                            <b>Formación profesional:</b><dd><i>Técnico en logística</i></dd>
+                            <b>Dirección:</b><dd><i>Calle 65 No. 46 A 95 Simón Bolívar, Itagüí, Antioquia</i></dd>
+                            <b>Periodo:</b><dd><i>2010 - 2011</i>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class="btnItem active">
+                            <b>Institución:</b><i>Instituto Tecnológico Metropolitano</i>
+                        </p>
+                        <div class="itemContent">
+                            <b>Formación profesional:</b><dd><i>Ingeniero Electrónico</i></dd>
+                            <b>Dirección:</b><dd><i>Calle 54 A 30-01 Boston, Medellín, Antioquia</i></dd>
+                            <b>Periodo:</b><dd><i>2012 - 2019</i>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class="btnItem active">
+                            <b>Institución:</b><i><a class="aHoja" href="https://www.utep.edu/" target="_blank">University of Texas at El Paso (UTEP)</a></i>
+                        </p>
+                        <div class="itemContent">
+                            <b>Formación profesional:</b><dd><i>Intercambio de investigación</i></dd>
+                            <b>Dirección:</b><dd><i>500 W University Ave, El Paso, Texas</i></dd>
+                            <b>Periodo:</b><dd><i>2018-01-05 - 2018-31-07</i></dd>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class="btnItem active">
+                            <b>Idioma:</b><i>Inglés</i>
+                        </p>
+                        <div class="itemContent">
+                            <b>Habla:</b><dd><i>Bueno</i></dd>
+                            <b>Lectura:</b><dd><i>Bueno</i></dd>
+                            <b>Escritura:</b><dd><i>Bueno</i></dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <hr>
+    <nav> <a href="refFamiliares.html"> Regresar página anterior</a></nav><br>
+    <button id="btnRegresarJava" type="button"><img src="download/BotonRegresar.PNG" height="50" width="50" onclick="paraPrincipal()"></button>
+    <footer style="text-align: right;">Elaborado por: Cristian Suárez Acosta</footer>
+</body>
+</html>

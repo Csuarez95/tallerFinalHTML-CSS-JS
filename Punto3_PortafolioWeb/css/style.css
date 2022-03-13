@@ -1,0 +1,140 @@
+
+/* index */
+#bodyPrincipal{
+    background-image: url(https://fondosmil.com/fondo/56928.jpg);
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    margin: 0;
+}
+
+#headerPrincipal{
+    color: snow;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-color: snow;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px 30px;
+    padding: 50px;
+    margin-top: 50px;
+    text-align: right;
+}
+
+
+button {
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 20%;
+}
+
+#btnRegresarJava {
+    cursor: pointer;
+    border: 1px solid black;
+    margin-left: 50%;
+}
+
+/* Java */
+/*Estillos Acordeon */
+.mainContainer{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btnItem{
+    background-color: steelblue;
+    display: block;
+    color: snow;
+    border-bottom: 3px solid black;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.itemContent{
+    background-color: silver;
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.active + .itemContent{
+    max-height: max-content;
+    padding: 10px;
+    opacity: 1;
+}
+
+.btnItem.active{
+    background-color: steelblue;
+}
+
+.btnItem:after{
+    content: '\22C1';
+    float: right;
+}
+
+.btnItem.active:after{
+    content: '\22C0';
+    float: right;
+}
+
+.titulo {
+    color: snow;
+    text-align: center;
+    border: 1px solid snow;
+    box-shadow: 5px 5px 10px black;
+    padding: 8px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px auto;
+    width: 350px;
+    height: auto;
+}
+
+.bodyTalleres{
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-circuito-electronico-estilo-gradiente_52683-14747.jpg?w=996");
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    margin: 0;
+}
+
+li {
+    background-color: antiquewhite;
+}
+
+/* Hoja de vida */
+#bodyHoja{
+    width: 1024px;
+    margin: 0px auto;
+    background-color: silver;
+}
+
+#sectionHoja{
+    border: 1px solid black;
+    box-shadow: 3px 5px 10px black;
+}
+
+.fondoImagen {
+    border: 10px solid black;
+    border-radius: 10px;
+    box-shadow: 6px 10px 10px black;
+}
+
+.aHoja{
+    text-decoration: none;
+    color: whitesmoke;
+    border: 50px;
+    background-color: black;
+    transition: background-color .5s;
+}
+.aHoja:hover{
+    color: black;
+    border: 10px;
+    background-color: whitesmoke;
+    font-size: 150%;
+}
+.aHoja:active{
+    background-color: lightskyblue;
+}
+

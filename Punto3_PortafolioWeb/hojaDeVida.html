@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida</title>
+    <meta name = "description" content="Muestra de información inicial de la hoja de vida">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/JavaScript.js"></script>
+</head>
+<body id="bodyHoja">
+    <header>
+        <h1 style="text-align: center;"><i>Hoja de vida</i></h1>
+        <figure style="text-align: center;">
+            <img src="download/Foto.PNG" alt="Foto par ala hoja de vida" class="fondoImagen">
+        </figure>
+        <select id="slcOpciones" onchange="cambiarFondo(this)">
+            <option value="silver">Tema 1</option>
+            <option value="blueviolet">Tema 2</option>
+            <option value="chartreuse">Tema 3</option>
+        </select>
+    </header>
+
+    <main>
+        <section id="sectionHoja">
+            <h2>Información inicial</h2>
+            
+            <article>
+                <table style="margin: 0 auto; ">
+                    <h3 style="text-align: center;">Datos personales e información</h3>
+                    <tr>
+                        <td><b>Nombre:</b></td> <td><dd><i>Cristian Suárez Acosta</i></dd></td>
+                    </tr>
+                    <tr>
+                        <td><b>Número documento:</b></td> <td><dd><i>1.036.657.902</i></dd></td>
+                    </tr>
+                    <tr>
+                        <td><b>Lugar y fecha nacimiento:</b></td> <td><dd><i>Febrero 18 del 1995, Medellín, Antioquia</i></dd></td>
+                    </tr>
+                    <tr>
+                        <td><b>Estado civil:</b></td> <td><dd><i>Soltero</i></dd></td>
+                    </tr>
+                    <tr>
+                        <td><b>Ciudad:</b></td> <td> <dd><i>Itagüí, Antioquia</i></dd></td>
+                    </tr>
+                    <tr>
+                        <td><b>Dirección:</b></td> <td><dd><i>Calle 65 # 46-39</i></dd></td>
+                    </tr>
+                    <tr>
+                        <td><b>Teléfono:</b></td> <td><dd><i>316-633-2191</i></dd></td>
+                    </tr>
+                    <tr>
+                        <td><b>Email:</b></td> <td><dd><i>cristian.9502@gmail.com</i></dd></td>
+                    </tr>
+                </table>
+            
+            </article>
+            <article>
+                <h3>Perfil profesional</h3>
+                <p style="text-align:justify">Soy ingeniero en electrónica y técnico en desarrollo de operaciones logísticas en la cadena 
+                    de abastecimiento, he realizado diferentes capacitaciones para fortalecer mis 
+                    conocimientos, aptitudes y actitudes. </p>
+                <p style="text-align:justify">Mi experiencia laboral y el recorrido académico me han permitido desarrollar 
+                    competencias para presentar informes acordes a la normatividad, referentes a prácticas 
+                    realizadas y trabajos de consulta, elaboración de funcionalidades de proyectos, testing de 
+                    nuevas soluciones a empresas, además de un buen manejo de Información en sistemas 
+                    digitales. En mi gestión puedo aportar para elegir, implementar y operar acondicionadores 
+                    de señal, lo que favorece la minimización de errores en la medición de las variables de los 
+                    procesos. Cuento con experiencia en manejo de instrumentos, libros y manuales en el 
+                    desarrollo de prototipos. </p>
+                <p style="text-align:justify">Actualmente soy ingeniero en electrónica del <a class="aHoja" href="https://www.itm.edu.co/" target="_blank">Instituto Tecnológico Metropolitano (ITM)</a> de 
+                    Medellín, y cuento con conocimientos básicos en la medición y control automático de las 
+                    variables electrónicas, desde la medición, el diseño y el control de las variables 
+                    industriales, la integración de tecnologías y con habilidades para realizar procesos 
+                    investigativos que ayuden al desempeño óptimo, conocimientos básicos en lenguajes de 
+                    programación como C, C++, Python, lenguaje M, además de tener la permanente 
+                    disposición a la innovación en pro del mejoramiento continuo. </p>
+            </article>
+
+        </section>
+    </main>
+    <hr>
+    <nav> <a class="aHoja" href="expLaboral.html"> Ir a la experiencia laboral </a></nav> <br>
+    <nav style="text-align: center;"> <a href="download/HOJADEVIDA_CristianSuarezAcosta2.pdf"> Descargar hoja de vida </a></nav> <br>
+    <button id="btnRegresarJava" type="button"><img src="download/BotonRegresar.PNG" height="50" width="50" onclick="paraPrincipal()"></button>
+    <footer style="text-align: right;">Elaborado por: Cristian Suárez Acosta</footer>
+</body>
+</html>
